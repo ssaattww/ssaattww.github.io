@@ -17,18 +17,24 @@ body{
 #container {
     display: grid;
     width = 100%;
-    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+    grid-template-columns: minmax(200px, 1fr) repeat(auto-fit,minmax(150px, 1fr));
     /*minmax関数によってviewの広さに合わせて勝手に大きさを変えてくれる*/
     grid-auto-rows: minmax(150px, auto);
     grid-row-gap: 5px;
     grid-column-gap: 5px;
 }
 .hover{
+    transition: all 400ms 0s ease;
     background: lightblue;
     padding: 20px;
     font-size: 30px;
     color: white;
     border:3px #ffffff solid;   
+}
+.hover a{
+    display:block;
+    width: 100%; /* 横幅 */
+    height: 100%;
 }
 .hover:hover{
     border:3px #5f5a5a solid;
@@ -48,7 +54,5 @@ body{
 }
 #side{/*idで指定してあげて一個だけ固定するというような使い方もできる*/
     grid-row: 1; grid-column: 1;
-}
-#side2{/*2個固定する*/
-    grid-row: 2; grid-column: 1;
+    grid-row: span 2;
 }
