@@ -1,7 +1,8 @@
 #container {
     display: grid;
     width = 100%;
-    grid-template-columns: repeat(auto-fit, 100px);
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-auto-rows: minmax(150px, auto);
 }
     
 .item{
