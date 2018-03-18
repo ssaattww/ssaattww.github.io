@@ -1,0 +1,21 @@
+#container {
+    display: grid;
+    width = 100%;
+    grid-template-columns: repeat(auto-fit, 100px);
+}
+    
+.item{
+    background: lightblue;
+    padding: 20px;
+    font-size: 30px;
+    color: white;    
+}
+.item:nth-child(odd) {
+     background: orange;
+}
+#side{/*idで指定してあげて一個だけ固定するというような使い方もできる*/
+     grid-row: 1; grid-column: 1;
+}
+#side2{/*2個固定する*/
+     grid-row: 2; grid-column: 1;
+}
